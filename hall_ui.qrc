@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="rpi.png">res/RaspberryPi.png</file>
+    </qresource>
+</RCC>
