@@ -43,6 +43,40 @@ Window {
             }
         }
 
+        Text {
+            id:id_cur_date_time
+            anchors.right: parent.right
+            font.pixelSize: 50
+            color: "#FFFFFF"
+            text: ""
+            Timer{
+                interval: 1000; running: true; repeat: true
+                onTriggered: {
+                    parent.text = qsTr(new Date().toLocaleString(Qt.locale("zh_CN")))
+                }
+            }
+        }
+
+        Text {
+            id:id_blog_text
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+            font.pixelSize: 30
+            color: "#FFFFFF"
+            text: qsTr("博客:https://blog.csdn.net/fittec?type=blog")
+        }
+
+        Text {
+            id:id_tech_text
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            font.pixelSize: 30
+            color: "#FFFFFF"
+            text: qsTr("基于WebAssembly Qt6.8.2 实现")
+
+        }
+
+
         Timer {
             interval: 100; running: true; repeat: true
             property int r: 36
